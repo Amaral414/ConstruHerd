@@ -15,7 +15,7 @@
 
   <!-- NavBar:  -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; z-index: 3;">
-    <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">ConstruHerd</a>
+    <a class="navbar-brand" href="index.html">ConstruHerd</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,16 +24,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
-        <!-- Home -->
-        <li class="nav-item active" style="position: relative; left: 50px;">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-
         <!--Menu DropDown-->
-        <li class="nav-item">
+        <li class="barraNavItem1">
           <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Inventário</button>
-            <div id="myDropdown" class="dropdown-content">
+            <button onclick="myFunction('homeDropdown')" class="dropbtn">
+              <p>Home</p>
+            </button>
+            <div id="homeDropdown" class="dropdown-content">
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
@@ -41,20 +38,28 @@
           </div>
         </li>
 
-        <li class="nav-item">
+        <li class="barraNavItem2">
           <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Propostas</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+            <button onclick="myFunction('propostaDropdown')" class="dropbtn">
+              <p>Propostas</p>
+            </button>
+            <div id="propostaDropdown" class="dropdown-content">
+              <a href="#">Link 7</a>
+              <a href="#">Link 8</a>
+              <a href="#">Link 9</a>
             </div>
           </div>
         </li>
 
-
-        <li class="nav-item" style="position: relative; left: 150px;">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Propostas</a>
+        <li class="barraNavItem3">
+          <div class="dropdown">
+            <button onclick="myFunction('inventarioDropdown')" class="dropbtn">
+              <p>Inventário</p>
+            </button>
+            <div id="inventarioDropdown" class="dropdown-content">
+              <a href="#">Link 4</a>
+            </div>
+          </div>
         </li>
       </ul>
 
@@ -69,9 +74,10 @@
 
 
 
+
   <!--DIV DO CENTRO-->
 
-  <div class="divAnalytic" style=" z-index: 1; position: absolute; width: 600px; height: 580px; top: 58px; align-items: center; background-color: #5F9660;
+  <div class="divDoCentroMain" style=" z-index: 1; position: absolute; width: 600px; height: 580px; top: 58px; align-items: center; background-color: #5F9660;
   left: 400px; border-radius: 1%;"></div>
 
 
@@ -79,7 +85,7 @@
 
 
   <!--DIV DA ESQUERDA-->
-  <div class="usrDiv" style="z-index: 2; position: relative; left: 3px; height: 580px; width: 391px;
+  <div class="divDaEsquerdaMain" style="z-index: 2; position: relative; left: 3px; height: 580px; width: 391px;
   top: 58px; color: #073308; background-color: #5F9660; border-radius: 1%;">
 
 
@@ -93,7 +99,7 @@
           <h6>Teste 2</h6>
           <h6>Teste 1</h6>
         </div>
-      
+
         <div style="width: 300px; height: 30px; background-color: black;">
           <button class="button1" style="position: relative;top: 2px; width: 95px; background-color: #144114; border: #011e01;
           left: 2px;">Depositar</button>
@@ -103,7 +109,7 @@
           left: 2px;
           ">Testar</button>
         </div>
-        
+
       </div>
     </div>
     <div class="usrImage" style="position: relative; height: 130px; width: 130px; background-color: black;
@@ -122,19 +128,33 @@
 
     <!-- Div de separação dos colocados-->
     <ul class="list-group" style="position: relative;  width: 320px;  left: 10px;top: 10px;">
-      
+
       <!-- Linha da lista-->
       <li class="list-group-item" aria-disabled="true" style="height: 70px;">
         <!-- Div de informações -->
-        <div style="position: absolute;width: 308px; height: 55px; left: 5px; top: 5px; border-style: solid; border-color:#054e05 ;
-        background-color: #0a8d0a6f; align-items: center;">          
+        <div style=" position: absolute;width: 308px; height: 55px; left: 5px; top: 5px; border-style: solid; border-color:#054e05 ;
+        background-color: #0a8d0a6f; align-items: center;">
           <!--  Colocação-->
-          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; "></div>
+          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; ">
+          </div>
           <!-- Foto so usuário-->
           <div
             style="position: absolute; width: 40px; height: 40px; background-color: #011e01;border-radius: 50%; left: 50px; bottom: 5px;">
             <img src="..." class="d-block w-100" alt="usrImage">
           </div>
+          <!-- Nome do usuário e Pts-->
+          <div style="position: absolute; left: 100px; width: 200px;height: 40px; background-color: black;
+          bottom: 5px; left: 95px;">
+            <p style="position: absolute; top: 8px;left: 10px; color: aliceblue;">Nome de usuário</p>
+            <div style="position: absolute; width: 30px; height: 30px;top: 5px; left: 160px;
+            background-color:aquamarine; border-radius: 10%;">
+              <p style="position: absolute; left: 5px;top: 2px;">10</p>
+            </div>
+
+          </div>
+
+
+
         </div>
 
       </li>
@@ -142,27 +162,74 @@
       <li class="list-group-item" style="height: 70px;">
         <!-- Div de informações -->
         <div style="position: absolute;width: 308px; height: 55px; left: 5px; top: 5px; border-style: solid; border-color:#054e05 ;
-        background-color: #0a8d0a6f; align-items: center;">          
+        background-color: #0a8d0a6f; align-items: center;">
           <!--  Colocação-->
-          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; "></div>
+          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; ">
+          </div>
           <!-- Foto so usuário-->
           <div
             style="position: absolute; width: 40px; height: 40px; background-color: #011e01;border-radius: 50%; left: 50px; bottom: 5px;">
             <img src="..." class="d-block w-100" alt="usrImage">
           </div>
+          <!-- Nome do usuário e Pts-->
+          <div style="position: absolute; left: 100px; width: 200px;height: 40px; background-color: black;
+          bottom: 5px; left: 95px;">
+            <p style="position: absolute; top: 8px;left: 10px; color: aliceblue;">Nome de usuário</p>
+            <div style="position: absolute; width: 30px; height: 30px;top: 5px; left: 160px;
+            background-color:aquamarine; border-radius: 10%;">
+              <p style="position: absolute; left: 5px;top: 2px;">10</p>
+            </div>
+
+          </div>          
         </div>
       </li>
 
-      <li class="list-group-item" style="height: 70px;">        
+      <li class="list-group-item" style="height: 70px;">
         <!-- Div de informações -->
         <div style="position: absolute;width: 308px; height: 55px; left: 5px; top: 5px; border-style: solid; border-color:#054e05 ;
-        background-color: #0a8d0a6f; align-items: center;">          
+        background-color: #0a8d0a6f; align-items: center;">
           <!--  Colocação-->
-          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; "></div>
+          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; ">
+          </div>
           <!-- Foto so usuário-->
           <div
             style="position: absolute; width: 40px; height: 40px; background-color: #011e01;border-radius: 50%; left: 50px; bottom: 5px;">
             <img src="..." class="d-block w-100" alt="usrImage">
+          </div>
+          <!-- Nome do usuário e Pts-->
+          <div style="position: absolute; left: 100px; width: 200px;height: 40px; background-color: black;
+          bottom: 5px; left: 95px;">
+            <p style="position: absolute; top: 8px;left: 10px; color: aliceblue;">Nome de usuário</p>
+            <div style="position: absolute; width: 30px; height: 30px;top: 5px; left: 160px;
+            background-color:aquamarine; border-radius: 10%;">
+              <p style="position: absolute; left: 5px;top: 2px;">10</p>
+            </div>
+
+          </div>          
+        </div>
+      </li>
+
+      <li class="list-group-item" style="height: 70px;">
+        <!-- Div de informações -->
+        <div style="position: absolute;width: 308px; height: 55px; left: 5px; top: 5px; border-style: solid; border-color:#054e05 ;
+        background-color: #0a8d0a6f; align-items: center;">
+          <!--  Colocação-->
+          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; ">
+          </div>
+          <!-- Foto so usuário-->
+          <div
+            style="position: absolute; width: 40px; height: 40px; background-color: #011e01;border-radius: 50%; left: 50px; bottom: 5px;">
+            <img src="..." class="d-block w-100" alt="usrImage">
+          </div>
+          <!-- Nome do usuário e Pts-->
+          <div style="position: absolute; left: 100px; width: 200px;height: 40px; background-color: black;
+          bottom: 5px; left: 95px;">
+            <p style="position: absolute; top: 8px;left: 10px; color: aliceblue;">Nome de usuário</p>
+            <div style="position: absolute; width: 30px; height: 30px;top: 5px; left: 160px;
+            background-color:aquamarine; border-radius: 10%;">
+              <p style="position: absolute; left: 5px;top: 2px;">10</p>
+            </div>
+
           </div>
         </div>
       </li>
@@ -170,27 +237,24 @@
       <li class="list-group-item" style="height: 70px;">
         <!-- Div de informações -->
         <div style="position: absolute;width: 308px; height: 55px; left: 5px; top: 5px; border-style: solid; border-color:#054e05 ;
-        background-color: #0a8d0a6f; align-items: center;">          
+        background-color: #0a8d0a6f; align-items: center;">
           <!--  Colocação-->
-          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; "></div>
+          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; ">
+          </div>
           <!-- Foto so usuário-->
           <div
             style="position: absolute; width: 40px; height: 40px; background-color: #011e01;border-radius: 50%; left: 50px; bottom: 5px;">
             <img src="..." class="d-block w-100" alt="usrImage">
           </div>
-        </div>
-      </li>
+          <!-- Nome do usuário e Pts-->
+          <div style="position: absolute; left: 100px; width: 200px;height: 40px; background-color: black;
+          bottom: 5px; left: 95px;">
+            <p style="position: absolute; top: 8px;left: 10px; color: aliceblue;">Nome de usuário</p>
+            <div style="position: absolute; width: 30px; height: 30px;top: 5px; left: 160px;
+            background-color:aquamarine; border-radius: 10%;">
+              <p style="position: absolute; left: 5px;top: 2px;">10</p>
+            </div>
 
-      <li class="list-group-item" style="height: 70px;">
-        <!-- Div de informações -->
-        <div style="position: absolute;width: 308px; height: 55px; left: 5px; top: 5px; border-style: solid; border-color:#054e05 ;
-        background-color: #0a8d0a6f; align-items: center;">          
-          <!--  Colocação-->
-          <div style="position: relative;left: 40px; top: 10px; width: 2px; height: 30px; background-color: black; "></div>
-          <!-- Foto so usuário-->
-          <div
-            style="position: absolute; width: 40px; height: 40px; background-color: #011e01;border-radius: 50%; left: 50px; bottom: 5px;">
-            <img src="..." class="d-block w-100" alt="usrImage">
           </div>
         </div>
       </li>
