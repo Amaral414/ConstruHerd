@@ -9,97 +9,66 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: #9AC09B; height: 50vh;">
 
-    <div class="divMain" style="
-        height: 100%;
-        width: 101%;
-        position: absolute;
-        background-color: #9AC09B;
-        border-radius: 1%;
-        ">
+    <div class="divMain">
 
-        <form style="
-        position: relative;
-        left: 50px;
-        top: 50px;
-        height: 500px;
-        width: 500px;
-        background-color: #5F9660;
-        border-radius: 1%;
+        <!-- Div Login -->
+        <form id="formLogin" class="formLogin" style="position: relative; left: 50px; top: 50px; height: 500px; width: 500px;
+        background-color: #5F9660; border-radius: 1%;">
 
-        ">
-
-            <div style="
-            position: relative;
-            left: 120px;
-            top: 100px;
-            
-            ">
+            <div style=" position: relative; left: 120px; top: 100px; ">
                 <h2 style="position: relative; left: 70px; top: -50px;">Login</h2>
-
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <label for="exampleInputEmail1">Email / Nome de Usuário</label>
+                    <input type="email" class="form-control" id="nomeDeUsuarioLogin" aria-describedby="emailHelp"
                         placeholder="Enter email" style="width: 250px;">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                    <label for="exampleInputPassword1">Senha</label>
+                    <input type="password" class="form-control" id="senhaDeUsuarioLogin" placeholder="Password"
                         style="width: 250px;">
                 </div>
         
-                <button type="submit" class="btn btn-primary "
-                    style="position: relative;width: 300px;right: 30px;top: 115px;background-color: #144114; border: #011e01;">Entrar</button>
+                <button type="submit" class="btn btn-primary " style="position: relative;width: 300px;right: 30px;
+                top: 115px;background-color: #144114; border: #011e01;">Entrar</button>
             </div>
         </form>
 
 
+        
+        <!-- Div Login -->
+        <form style="position: relative; left: 700px; height: 500px; width: 500px; background-color: #5F9660; top: -450px;border-radius: 1%;">
 
-        <form style="
-        position: relative;
-        left: 700px;
-        height: 500px;
-        width: 500px;
-        background-color: #5F9660;
-        top: -450px;
-        border-radius: 1%;
- ">
-
-            <div class="aiin" style="
-            position: relative;
-            left: 120px;
-            top: 30px;
-             
-             ">
+            <div class="aiin" style="position: relative; left: 120px; top: 30px; ">
                 <h2 style="position: relative; left: 50px;">Cadastro</h2>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input type="email" class="form-control" id="emailDoUsuario" aria-describedby="emailHelp"
                         placeholder="Email" style="width: 250px;">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">Nome de usuário</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Usuário"
+                    <input type="text" class="form-control" id="nomeDeUsuario" placeholder="Usuário"
                         style="width: 250px;">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha"
+                    <input type="password" class="form-control" id="senhaDeUsuario" placeholder="Senha"
                         style="width: 250px;">
                 </div>
 
                 <div class="form-group"></div>
                 <label for="exampleInputPassword1">Repetir senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repetir senha"
+                <input type="password" class="form-control" id="repetiçãoDeSenha" placeholder="Repetir senha"
                     style="width: 250px;">
 
             </div>
-            <button type="submit" class="btn btn-primary"
-                style="position: relative;width: 300px;left: 95px; top: 60px; background-color: #144114; border: #011e01;">Cadastrar</button>
+            <button type="submit" class="btn btn-primary"style="position: relative;width: 300px;left: 95px;
+            top: 60px; background-color: #144114; border: #011e01;">Cadastrar</button>
 
 
 
@@ -107,14 +76,9 @@
     </div>
     </form>
 
-
-
-
-
-
-
-
     </div>
+   
+    <script src="script.js"></script>
 </body>
 
 </html>
